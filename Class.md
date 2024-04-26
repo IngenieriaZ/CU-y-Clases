@@ -1,5 +1,4 @@
 # Diagrama de clases
-
 @startuml
 
 class Objetivo{
@@ -27,6 +26,14 @@ class Tarea{
   
 }
 
+Objetivo --* Evento
+class Evento{
+  objetivos: Objetivo
+  usuarios: Usuario
+  recompensa: Recompensa
+  
+}
+
 @enduml
 
-![](https://www.plantuml.com/plantuml/png/TP1BQiKm34NdMeN6XRS1ZzuE2lqiGB55KB6j8DkPbEozTaY31-t0S7MGEHSzIoMhBKK07waKV5s-kCgktu2ODIt63j-hILuxaE1GSkMLhK-1YpVPl6YUTeozferp8OTlTmR44IDN2kfmKOrCkTEZF_YLukCn_RagJUJFKbKsdSQTeje_dG6EsVM27sHCbsRaqw3NHd7tDJfjfP79W9zd6WmEW2Vdq5By0G00)
+![](https://www.plantuml.com/plantuml/png/bP4zQWGn38Lxdq9rO2_WQflKWVmSG3CMYu976cJDD67l7WtUB0vaYnI6fy_oUq8-DqVpRQbfhjWQl4oVvBphLm8GNIQZ36zkB9S0N3AmE5t8eYhKPkDrPfMXnsZMPILfcE7rhkFYa9KSYsQOL2kX1Bt6IJ-XS3gDR_f80_bpAETLXtB7glPWvfIkOzOJlACHzfYkZmIzTRHytqRGhMreVC2FheA5tM-_vvt4zMROYtyvFjvUH9r9IdpKDm00)
