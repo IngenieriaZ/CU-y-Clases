@@ -1,5 +1,4 @@
 package com.bicicletas.modelo;
-import org.hibernate.annotations.OnDelete;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

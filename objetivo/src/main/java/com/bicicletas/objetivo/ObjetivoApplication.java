@@ -1,4 +1,4 @@
-package com.bicicletas.objetivo.java;
+package com.bicicletas.objetivo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
