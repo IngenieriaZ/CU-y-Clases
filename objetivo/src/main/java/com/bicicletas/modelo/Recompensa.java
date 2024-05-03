@@ -1,5 +1,7 @@
 package com.bicicletas.modelo;
 
+import java.util.UUID;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,7 +12,7 @@ import jakarta.persistence.OneToOne;
 public class Recompensa {
     @Id
     @GeneratedValue(strategy=GenerationType.UUID)
-    Integer id;
+    UUID id;
     String nombre;
     String tipo;
     String valor;
