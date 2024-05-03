@@ -1,4 +1,4 @@
-package com.bicicletas.modelo;
+package com.bicicletas.objetivo.modelo;
 
 import java.util.UUID;
 
@@ -7,8 +7,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Objetivo {
     @Id
     @GeneratedValue(strategy =GenerationType.UUID)
@@ -19,6 +25,7 @@ public class Objetivo {
     boolean completado;
     boolean iniciado;
     Integer vencimiento;
+    
     @OneToOne(mappedBy = "objetivo")
     Recompensa recompensa;
     

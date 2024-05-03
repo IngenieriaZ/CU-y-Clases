@@ -9,6 +9,5 @@ services:
       - MYSQL_DATABASE=bicicletas
       - MYSQL_USER=bicicletas
       - MYSQL_PASSWORD=secret
-
     ports:
       - 3306:3306
