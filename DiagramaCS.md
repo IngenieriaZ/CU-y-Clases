@@ -60,4 +60,5 @@
 
 # Diagrama de Clases
 
-![]{https://www.plantuml.com/plantuml/png/bP6nRiCm34HtVeNc0lc1J5awjsYx5unr25JOb4jIMOh-UsrOZUmaImOFT-8z4kU3EQkNeIVgUZOBnGfhoZyKWhacEGN9mr4nwIGU43cs9uSg9DFlV_g35NoJRJh2EarZbxAq4BvB6cytVYv-NJnzE2cBmrhovVW5J-TipnV4-mKXZL7zxG7DX3d7V0Vx2hKitCEsw9bSYteG_OOk3oF4vfOgQb-79yEdOrVop7tMbKvnlnG19PgXLmM4fzrkjOAe7ZdxoxyXGfkihnllYhX5t2c6Y0wGM8R-3m00}
+
+![](https://www.plantuml.com/plantuml/png/TOzD2iD028NtSmela0lCAZSej2SmCn8i4msEpQRaxhNGdopQXV3UK_5px8xcjwMbqh1tE4rNSjxqdW14byaemyMDPOw0QmOMfvaiNALUZDV2AeSPewBBIj8nm_cZe_6KZHohPfXK6w54kaUbzr4OXkFE2-cR_8HoNlLWDsngVvXJsjD8KkFT1m00)
