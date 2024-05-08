@@ -1,7 +1,6 @@
 package com.bicicletas.objetivo.modelo;
 
 import java.util.UUID;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,17 +16,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Objetivo {
     @Id
-    @GeneratedValue(strategy =GenerationType.UUID)
-    UUID id;
+    @GeneratedValue(strategy = GenerationType.AUTO) 
+    private UUID id;
 
-    String nombre;
-    String descripcion;
-    boolean completado;
-    boolean iniciado;
-    Integer vencimiento;
-    
+    private String nombre;
+    private String descripcion;
+    private boolean completado;
+    private boolean iniciado;
+    private Integer vencimiento;
+
     @OneToOne(mappedBy = "objetivo")
-    Recompensa recompensa;
-    
-    
+    private Recompensa recompensa;
 }
