@@ -2,7 +2,6 @@ package com.bicicletas.objetivo.modelo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.Optional;
@@ -14,7 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bicicletas.objetivo.dataAccess.ObjetivoRepository;
-import com.bicicletas.objetivo.modelo.Objetivo;
 import com.bicicletas.objetivo.logica.ObjetivosService;
 
 @SpringBootTest

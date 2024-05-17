@@ -1,6 +1,9 @@
 package com.bicicletas.objetivo.rest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation. RestController;
+
+import com.bicicletas.objetivo.modelo.Objetivo;
 
 
 // controlador de solicitudes REST
@@ -10,7 +13,7 @@ import org.springframework.web.bind.annotation. RestController;
 
  @RestController
 
- T @RequestMapping("/api/Objetivo")
+ @RequestMapping("/api/Objetivo")
 
 public class ObjetivosRestController {
 

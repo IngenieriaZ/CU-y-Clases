@@ -12,7 +12,6 @@ public interface ObjetivoRepository
     extends JpaRepository<Objetivo, UUID>
 {
 // obtiene el objetivo con "enProceso == true"")
-Objetivo findByEnProcesoTrue();
 /*
 // obtiene los trayectos entre fecha inico y fecha fin
 @Modifying

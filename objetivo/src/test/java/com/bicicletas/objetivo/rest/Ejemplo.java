@@ -6,13 +6,13 @@ import java.util.List;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
 import com.bicicletas.objetivo.modelo.Objetivo;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 
@@ -22,16 +22,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 public class Ejemplo {
 
-    @GetMapping("/api/ejemplo")
-
+    
     List<Objetivo> objetivos = new ArrayList<Objetivo>();
 
-    public List<Objetivo> todos(
+    @GetMapping("/api/ejemplo")
+    public List<Objetivo> todos(){
         return objetivos;
-    )
+    }
 
     @PostMapping("/api/ejemplo")
-
     public Integer grabar(@RequestBody Objetivo nuevo){
         objetivos.add(nuevo);
         return objetivos.size()-1;
@@ -48,6 +47,7 @@ public class Ejemplo {
 
     public Integer modificarObjetivoxindice(@PathVariable Integer id,@RequestBody Objetivo nuevo ){
         objetivos.set(id, nuevo);
+        return id;
     }
 
     @DeleteMapping("/api/ejemplo/{id}")
