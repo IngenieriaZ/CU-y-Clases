@@ -27,4 +27,9 @@ public class Objetivo {
 
     @OneToOne(mappedBy = "objetivo")
     private Recompensa recompensa;
+
+    public void setUsuario(Usuario usuario) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setUsuario'");
+    }
 }

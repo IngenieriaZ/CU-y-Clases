@@ -1,19 +1,13 @@
 package com.bicicletas.objetivo.dataAccess;
 
-import java.util.List;
-import java.util.UUID;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
 import com.bicicletas.objetivo.modelo.Objetivo;
 import com.bicicletas.objetivo.modelo.Usuario;
+import java.util.List;
+
 
 @Repository
-public interface ObjetivoRepository
-    extends JpaRepository<Objetivo, UUID>
-{
-
-    List<Objetivo> findByUsuarioAndCompletado(Usuario usuario, boolean b);
-
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
+    List<Usuario> findByUsuarioAndCompletado(Usuario usuario, boolean completado);
 }
