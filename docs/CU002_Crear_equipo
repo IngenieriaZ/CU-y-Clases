@@ -1,0 +1,46 @@
+# CU002: Crear Equipo
+
+---
+
+**Descripción:** Cuando un usuario desea crear un nuevo equipo en la plataforma WinBici, registra el nombre del equipo y los miembros iniciales.
+
+**Actor:** Usuario
+
+
+
+## Flujo de Eventos (Guión)
+
+
+| Actor  | Sistema |
+|:-------|:---------|
+| 1. Ingresa el nombre del equipo y los miembros iniciales | |
+| | 2. Verifica que el nombre del equipo no esté registrado previamente |
+| | 3. Genera un ID único para el nuevo usuario |
+| | 4. Almacena el nuevo equipo con su ID, nombre y miembros iniciales |
+| | 5. Retorna un mensaje de confirmación de la creación del equipo |
+
+
+## Excepciones
+
+2. Cuando el equipo ya está registrado
+
+| Actor  | Sistema |
+|:-------|:---------|
+| | 2.1. Muestra un mensaje "El nombre del equipo ya está registrado" |
+| | 2.2. Termina | 
+
+## Diagrama
+
+![alt text](image-1.png)
+
+```plantuml
+@startuml "crear_equipo"
+left to right direction
+skinparam packageStyle rectangle
+
+actor usuario
+rectangle WinBici {
+  usuario -- (Crear Equipo)
+}
+
+@enduml

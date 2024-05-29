@@ -1,0 +1,45 @@
+# CU003: Crear Evento
+
+---
+
+**Descripción:** Cuando un usuario desea crear un nuevo evento en la plataforma WinBici, registra el nombre del evento y la fecha del mismo.
+
+**Actor:** Usuario
+
+
+## Flujo de Eventos (Guión)
+
+
+| Actor  | Sistema |
+|:-------|:---------|
+| 1. Ingresa el nombre del evento y la fecha del mismo | |
+| | 2. Verifica que el nombre del evento no esté registrado previamente |
+| | 3. Genera un ID único para el nuevo evento |
+| | 4. Almacena el nuevo equipo con su ID, nombre y fecha |
+| | 5. Retorna un mensaje de confirmación de la creación del evento |
+
+
+## Excepciones
+
+2. Cuando el nombre del evento ya está registrado
+
+| Actor  | Sistema |
+|:-------|:---------|
+| | 2.1. Muestra un mensaje "El nombre del evento ya está registrado" |
+| | 2.2. Termina |
+
+## Diagrama
+
+![alt text](image-2.png)
+
+```plantuml
+@startuml "crear_evento"
+left to right direction
+skinparam packageStyle rectangle
+
+actor usuario
+rectangle WinBici {
+  usuario -- (Crear Evento)
+}
+
+@enduml

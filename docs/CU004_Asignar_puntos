@@ -1,0 +1,45 @@
+# CU004: Asignar Puntos a Usuario
+
+---
+
+**Descripción:** Cuando un administrador desea asignar puntos a un usuario en la plataforma WinBici, registra el ID del usuario y la cantidad de puntos a asignar.
+
+**Actor:** Administrador
+
+
+## Flujo de Eventos (Guión)
+
+
+| Actor  | Sistema |
+|:-------|:---------|
+| 1. Ingresa el ID del usuario y la cantidad de puntos a asignar | |
+| | 2. Verifica que el ID del usuario exista |
+| | 3. Asigna la cantidad de puntos al usuario |
+| | 4. Almacena la transacción de puntos |
+| | 5. Retorna un mensaje de confirmación de la asignación de puntos |
+
+
+## Excepciones
+
+2. Cuando el ID del usuario no existe
+
+| Actor  | Sistema |
+|:-------|:---------|
+| | 2.1. Muestra un mensaje "El ID del usuario no existe" |
+| | 2.2. Termina |
+
+## Diagrama
+
+![alt text](image-3.png)
+
+```plantuml
+@startuml "asignar_puntos"
+left to right direction
+skinparam packageStyle rectangle
+
+actor administrador
+rectangle WinBici {
+  administrador -- (Asignar Puntos a Usuario)
+}
+
+@enduml

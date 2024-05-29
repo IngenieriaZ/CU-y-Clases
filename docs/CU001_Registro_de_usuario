@@ -1,0 +1,45 @@
+# CU001: Registro de Usuario
+
+---
+
+**Descripción:** Cuando un nuevo usuario desea unirse a la plataforma WinBici, registra su nombre y su correo electrónico.
+
+**Actor:** Usuario
+
+
+## Flujo de Eventos (Guión)
+
+
+| Actor  | Sistema |
+|:-------|:---------|
+| 1. Ingresa el nombre y el correo electrónico | |
+| | 2. Verifica que el correo electrónico no este registrado previamente |
+| | 3. Genera un ID único para el nuevo usuario |
+| | 4. Almacena el nuevo usuario con su ID, nombre y correo electrónico |
+| | 5. Retorna un mensaje de confirmación del registro |
+
+
+## Excepciones
+
+2. Cuando el correo electrónico ya está registrado
+
+| Actor  | Sistema |
+|:-------|:---------|
+| | 2.1. Muestra un mensaje "El correo electrónico ya está registrado" |
+| | 2.2. Termina | 
+
+## Diagrama 
+
+![alt text](image.png)
+
+```plantuml
+@startuml "registro_usuario"
+left to right direction
+skinparam packageStyle rectangle
+
+actor usuario
+rectangle WinBici {
+  usuario -- (Registro de Usuario)
+}
+
+@enduml
