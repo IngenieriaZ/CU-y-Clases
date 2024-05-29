@@ -42,19 +42,19 @@ public class UsuarioController {
 
     // Obtener un usuario por ID
     @GetMapping("/{id}")
-    public Optional<Usuario> getUsuarioById(@PathVariable Integer id) {
+    public Optional<Usuario> getUsuarioById(@PathVariable Long id) {
         return usuarioRepository.findById(id);
     }
     
     // Obtener objetivos cumplidos por un usuario
     @GetMapping("/{id}/objetivos-cumplidos")
-    public List<Objetivo> getObjetivosCumplidos(@PathVariable Integer id) {
+    public List<Objetivo> getObjetivosCumplidos(@PathVariable Long id) throws Exception {
         return usuarioService.getObjetivosCumplidos(id);
     }
 
     // Obtener objetivos por cumplir por un usuario
     @GetMapping("/{id}/objetivos-por-cumplir")
-    public List<Objetivo> getObjetivosPorCumplir(@PathVariable Integer id) {
+    public List<Objetivo> getObjetivosPorCumplir(@PathVariable Long id) throws Exception {
         return usuarioService.getObjetivosPorCumplir(id);
     }
 
@@ -71,7 +71,7 @@ public class UsuarioController {
     @PostMapping()
     public String crearUsuario(@RequestBody CrearUsuarioRequest request) throws Exception {
         try {
-            Long idUsuario = usuarioService.crearUsuario(request.getNombre(), request.getEmail());
+            Long idUsuario = usuarioService.crearUsuario(request.getNombre(), request.getEmail(), null);
             if (idUsuario != null) {
                 System.out.println("Usuario Creado");
                 return "Usuario Creado";
@@ -89,7 +89,7 @@ public class UsuarioController {
     @NoArgsConstructor
     @AllArgsConstructor
     static class AsignarObjetivoRequest {
-        Integer usuarioId;
+        Long usuarioId;
         UUID objetivoId;
     }
 

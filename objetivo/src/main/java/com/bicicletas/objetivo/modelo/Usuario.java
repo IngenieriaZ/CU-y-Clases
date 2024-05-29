@@ -1,3 +1,4 @@
+
 package com.bicicletas.objetivo.modelo;
 
 import jakarta.persistence.Entity;
@@ -19,5 +20,4 @@ public class Usuario {
     private String nombre;
     private String email;
     private String contrasena;
-
 }

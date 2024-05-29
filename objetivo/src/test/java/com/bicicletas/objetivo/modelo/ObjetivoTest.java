@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bicicletas.objetivo.dataAccess.ObjetivoRepository;
-import com.bicicletas.objetivo.logica.ObjetivosService;
+import com.bicicletas.objetivo.logica.ObjetivoService;
 
 @SpringBootTest
 /*
@@ -74,7 +74,7 @@ public class ObjetivoTest {
 class ObjetivosServiceTests {
 
     @Autowired
-    ObjetivosService objetivosService;
+    ObjetivoService objetivosService;
 
     @Autowired
     ObjetivoRepository objetivoRepository;
