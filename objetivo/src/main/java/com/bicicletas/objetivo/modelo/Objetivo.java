@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,8 +29,7 @@ public class Objetivo {
     @OneToOne(mappedBy = "objetivo")
     private Recompensa recompensa;
 
-    public void setUsuario(Usuario usuario) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setUsuario'");
-    }
+    @ManyToOne
+    private Usuario usuario;
+
 }
