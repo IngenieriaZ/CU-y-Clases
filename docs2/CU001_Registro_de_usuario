@@ -14,10 +14,9 @@
 |:-------|:---------|
 | 1. Ingresa el nombre,el correo electrónico y la contraseña | |
 | | 2. Verifica que el correo electrónico no este registrado previamente |
-| | 3. Verifica que la contraseña sea valida|
-| | 4. Genera un ID único para el nuevo usuario |
-| | 5. Almacena el nuevo usuario con su ID, nombre, contraseña y correo electrónico |
-| | 6. Retorna un mensaje de confirmación del registro |
+| | 3. Genera un ID único para el nuevo usuario |
+| | 4. Almacena el nuevo usuario con su ID, nombre, contraseña y correo electrónico |
+| | 5. Retorna un mensaje de confirmación del registro |
 
 
 ## Excepciones
@@ -29,11 +28,6 @@
 | | 2.1. Muestra un mensaje "El correo electrónico ya está registrado" |
 | | 2.2. Termina | 
 
-3. Cuando la contraseña no es valida
-| Actor  | Sistema |
-|:-------|:---------|
-| | 3.1. Muestra un mensaje "La contraseña no es valida" |
-| | 3.2. Termina |  
 
 ## Diagrama 
 
