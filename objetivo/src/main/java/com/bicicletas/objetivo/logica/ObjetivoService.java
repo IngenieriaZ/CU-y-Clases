@@ -43,7 +43,15 @@ public class ObjetivoService {
         return objetivoRepository.findAll();
     }
 
+    // Establecer Objetivo
     public UUID establecerObjetivo(String nombre, String descripcion, boolean iniciado, Integer vencimiento) {
-        throw new UnsupportedOperationException("Unimplemented method 'establecerObjetivo'");
+        Objetivo objetivo = new Objetivo();
+        objetivo.setNombre(nombre);
+        objetivo.setDescripcion(descripcion);
+        objetivo.setCompletado(false);
+        objetivo.setIniciado(iniciado);
+        objetivo.setVencimiento(vencimiento);
+        objetivo = objetivoRepository.save(objetivo);
+        return objetivo.getId();
     }
 }

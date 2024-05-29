@@ -23,7 +23,7 @@ public class ObjetivoController {
 
     @Autowired
     ObjetivoRepository objetivoRepository;
-    
+
     @Autowired
     ObjetivoService objetivoService;
 
