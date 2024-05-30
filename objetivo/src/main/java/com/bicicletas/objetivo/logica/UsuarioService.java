@@ -35,6 +35,7 @@ public class UsuarioService {
         usuario = usuarioRepository.save(usuario);
         return usuario.getId();
     }
+    
 
     // Obtener objetivos cumplidos por usuario
     public List<Objetivo> getObjetivosCumplidos(Long usuarioId) throws Exception {
