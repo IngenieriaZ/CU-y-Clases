@@ -1,6 +1,9 @@
 package com.bicicletas.objetivo.modelo;
 
 import java.util.UUID;
+
+import org.springframework.stereotype.Component;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,6 +18,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Component
 public class Objetivo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO) 

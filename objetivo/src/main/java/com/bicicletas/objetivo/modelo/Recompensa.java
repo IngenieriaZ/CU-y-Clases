@@ -2,6 +2,8 @@ package com.bicicletas.objetivo.modelo;
 
 import java.util.UUID;
 
+import org.springframework.stereotype.Component;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Component
 public class Recompensa {
     
     @Id
