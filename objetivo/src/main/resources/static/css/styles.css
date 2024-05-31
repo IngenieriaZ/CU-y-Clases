@@ -95,6 +95,27 @@ footer {
 }
 
 /* Nuevos estilos para registrarUsuario.html */
+form div label {
+    color: white;
+}
+
+/* Nuevos estilos para mostrarRecompensas.html */
+#recompensas-container ul li {
+    color: white;
+}
+
+/* Nuevos estilos para crearObjetivo.html */
+form div label {
+    color: white;
+}
+
+/* Nuevos estilos para mostrarObjetivos.html */
+#objetivos-por-cumplir,
+#objetivos-cumplidos,
+#objetivos-por-cumplir li,
+#objetivos-cumplidos li {
+    color: white;
+}
 
 /* Main content styles */
 .content {
