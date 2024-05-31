@@ -20,21 +20,21 @@ public class UsuarioService {
     @Autowired
     ObjetivoRepository objetivoRepository;
 
-    // Crear Usuario
     public Long crearUsuario(String nombre, String email, String contrasena) throws Exception {
         // Verificar si el correo electrónico ya está registrado
         Optional<Usuario> usuarioExistente = usuarioRepository.findByEmail(email);
         if (usuarioExistente.isPresent()) {
             throw new Exception("El correo electrónico ya está registrado");
         }
-
+    
         Usuario usuario = new Usuario();
         usuario.setNombre(nombre);
         usuario.setEmail(email);
-        usuario.setContrasena(contrasena);
+        usuario.setContrasena(contrasena); // Asegúrate de que esta línea esté presente
         usuario = usuarioRepository.save(usuario);
         return usuario.getId();
     }
+    
     
 
     // Obtener objetivos cumplidos por usuario

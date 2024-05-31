@@ -65,13 +65,14 @@ public class UsuarioController {
     static class CrearUsuarioRequest {
         String nombre;
         String email;
+        String contrasena;
     }
 
     // Crear un nuevo usuario
     @PostMapping()
     public String crearUsuario(@RequestBody CrearUsuarioRequest request) throws Exception {
         try {
-            Long idUsuario = usuarioService.crearUsuario(request.getNombre(), request.getEmail(), null);
+            Long idUsuario = usuarioService.crearUsuario(request.getNombre(), request.getEmail(), request.getContrasena());
             if (idUsuario != null) {
                 System.out.println("Usuario Creado");
                 return "Usuario Creado";
@@ -83,6 +84,7 @@ public class UsuarioController {
             return "Error en la creación del Usuario";
         }
     }
+    
 
     // DTO para asignar objetivos a usuarios
     @Data
