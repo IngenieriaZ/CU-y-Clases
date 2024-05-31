@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Objetivo - WinBici</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Crear Nuevo Objetivo</h1>
+    </header>
+    <main>
+        <form id="crearObjetivoForm">
+            <div>
+                <label for="nombre">Nombre del Objetivo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+            </div>
+            <div>
+                <label for="vencimiento">Días para Vencimiento:</label>
+                <input type="number" id="vencimiento" name="vencimiento" required>
+            </div>
+            <div>
+                <button type="submit">Crear Objetivo</button>
+            </div>
+        </form>
+        <div id="mensaje"></div>
+    </main>
+    <script src="/js/crearObjetivo.js"></script>
+</body>
+</html>
