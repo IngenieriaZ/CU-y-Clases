@@ -37,7 +37,19 @@ curl http://localhost:8080/usuarios/1/objetivos-por-cumplir
 
 # Crear recompensa
 echo "Crear recompensa"
-curl -X POST http://localhost:8080/recompensas -H "Content-Type: application/json" -d '{"nombre":"Medalla de oro","tipo":"Medalla","valor":"Alta"}'
+curl -X POST http://localhost:8080/recompensas -H "Content-Type: application/json" -d '{"nombre":"🚲 Bicicleta Pro Max","tipo":"Medalla","valor":"Alta"}'
+
+# Crear recompensa 1
+echo "Crear recompensa 1"
+curl -X POST http://localhost:8080/recompensas -H "Content-Type: application/json" -d '{"nombre":"🥇 Medalla de oro","tipo":"Medalla","valor":"Alta"}'
+
+# Crear recompensa 2
+echo "Crear recompensa 2"
+curl -X POST http://localhost:8080/recompensas -H "Content-Type: application/json" -d '{"nombre":"🥈 Medalla de plata","tipo":"Medalla","valor":"Media"}'
+
+# Crear recompensa 3
+echo "Crear recompensa 3"
+curl -X POST http://localhost:8080/recompensas -H "Content-Type: application/json" -d '{"nombre":"🥉 Medalla de bronce","tipo":"Medalla","valor":"Baja"}'
 
 # Listar recompensas
 echo "Listar recompensas"
