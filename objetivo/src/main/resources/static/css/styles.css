@@ -1,22 +1,77 @@
 /* Estilos existentes */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #2b373d; /* Cambiado */
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #1a1e20; /* Cambiado */
     color: white;
     padding: 10px 0;
     text-align: center;
+    position: relative; /* Para posicionar el logo */
+}
+
+header h1 {
+    color: #6cff6c; /* Cambiado */
+}
+
+header h2 {
+    color: white; /* Cambiado */
+}
+
+header .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px; /* Ajustar según el tamaño deseado */
+    height: auto;
 }
 
 main {
-    margin: 20px;
-    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    position: relative; /* Para posicionar el contenido relativo */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+.content {
+    max-width: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1;
+}
+
+.side-image-right {
+    width: 50%; /* Reducir el tamaño al 50% */
+    height: auto;
+    position: absolute;
+    right: -100px; /* Mover 100 píxeles a la izquierda */
+    top: 0; /* Mover 200 píxeles hacia abajo */
+    z-index: 0; /* Asegurar que esté detrás del contenido principal */
+    opacity: 0.8; /* Ajustar la opacidad si es necesario */
+}
+
+.side-image-left {
+    width: 50%; /* Reducir el tamaño al 50% */
+    height: auto;
+    position: absolute;
+    left: -100px; /* Mover 100 píxeles a la izquierda */
+    top: 0; /* Mover 200 píxeles hacia abajo */
+    z-index: 0; /* Asegurar que esté detrás del contenido principal */
+    opacity: 0.8; /* Ajustar la opacidad si es necesario */
 }
 
 a {
@@ -30,7 +85,7 @@ a:hover {
 }
 
 footer {
-    background-color: #4CAF50;
+    background-color: #1a1e20; /* Cambiado */
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -42,7 +97,7 @@ footer {
 /* Nuevos estilos para registrarUsuario.html */
 
 /* Main content styles */
-main {
+.content {
     margin: 20px auto; /* Ajuste para centrado automático */
     padding: 20px;
     max-width: 400px;
