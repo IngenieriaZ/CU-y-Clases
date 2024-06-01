@@ -23,7 +23,7 @@ En el la siguiente imagen se encuentra el diagrama de los 5 casos de uso básico
 
 ![alt text](DOCUMENTOS_WINBICI/image-1.png)
 
-## Casos de Uso
+## CASOS DE USO
 
 # CU001: Registro de Usuario
 
