@@ -12,16 +12,16 @@ La propuesta de este proyecto es el lanzamiento de "WinBici", una plataforma dig
 
 ## Diagrama de Clases:
 
-![alt text](image.png)
+![alt text](DOCUMENTOS_WINBICI/image.png)
 
-![alt text](image-2.png)
+![alt text](DOCUMENTOS_WINBICI/image-2.png)
 
 
 ## Esquema de Casos de Uso:
 
 En el la siguiente imagen se encuentra el diagrama de los 5 casos de uso básicos para el funcionamiento de la parte inicial de WinBici
 
-![alt text](image-1.png)
+![alt text](DOCUMENTOS_WINBICI/image-1.png)
 
 ## Casos de Uso
 
