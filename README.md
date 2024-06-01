@@ -55,11 +55,11 @@ En el la siguiente imagen se encuentra el diagrama de los 5 casos de uso básico
 | | 2.1. Muestra un mensaje "El correo electrónico ya está registrado" |
 | | 2.2. Termina | 
 
-# CU002: Crear Equipo
+# CU002: Crear Objetivo
 
 ---
 
-**Descripción:** Cuando un usuario desea crear un nuevo equipo en la plataforma WinBici, registra el nombre del equipo y los miembros iniciales.
+**Descripción:** Cuando un usuario desea crear un nuevo objetivo en la plataforma WinBici, registra el nombre del objetivo, la descripción y la fecha de vencimiento.
 
 **Actor:** Usuario
 
@@ -70,121 +70,73 @@ En el la siguiente imagen se encuentra el diagrama de los 5 casos de uso básico
 
 | Actor  | Sistema |
 |:-------|:---------|
-| 1. Ingresa el nombre del equipo y los miembros iniciales | |
-| | 2. Verifica que el nombre del equipo no esté registrado previamente |
-| | 3. Genera un ID único para el nuevo usuario |
-| | 4. Almacena el nuevo equipo con su ID, nombre y miembros iniciales |
-| | 5. Retorna un mensaje de confirmación de la creación del equipo |
+| 1. Ingresa los detalles del objetivo (nombre, descripción, vencimiento) | |
+| | 2. Genera un ID único para el nuevo objetivo |
+| | 3. Almacena el nuevo objetivo con su ID, nombre, descripción y vencimiento |
+| | 4. Retorna un mensaje de confirmación de la creación del objetivo |
+
 
 
 ## Excepciones
 
-2. Cuando el equipo ya está registrado
+2. Cuando ocurre un error en la creación del objetivo
+
+| Actor  | Sistema |
+|| 2.1. Muestra un mensaje "Error en la creación del objetivo" |
+|| 2.2 Termina |
+
+# CU003: Mostrar recompensa
+
+---
+
+**Descripción:** Cuando un usuario desea visualizar las recompensas disponibles, accede a este caso de uso para poder consultarlos.
+
+**Actor:** Usuario
+
+## Flujo de Eventos (Guión)
+
 
 | Actor  | Sistema |
 |:-------|:---------|
-| | 2.1. Muestra un mensaje "El nombre del equipo ya está registrado" |
+| 1. Solicita ver las recompensas disponibles | |
+| | 2. Recupera la lista de recompensas disponibles |
+| | 3. Muestra la lista de recompensas al usuario |
+
+
+
+## Excepciones
+
+2. Cuando no hay recompensas disponibles.
+
+| Actor  | Sistema |
+|| 2.1. Muestra un mensaje "No hay recompensas disponibles"|
+|| 2.2 Termina |
+
+# CU004: Mostrar objetivos
+
+---
+
+**Descripción:** Cuando el usuario quiera ver los objetivos que ha ingresado, accede a la base y se mostrarán los resultados.
+
+**Actor:** usuario
+
+
+## Flujo de Eventos (Guión)
+
+
+| Actor  | Sistema |
+|:-------|:---------|
+| 1. Solicita ver los objetivos cumplidos y por cumplir | |
+| | 2. Recupera la lista de objetivos cumplidos y por cumplir del usuario |
+| | 3. Muestra la lista de objetivos al usuario|
+
+
+## Excepciones
+
+2. Cuando no hay objetivos disponibles
+
+| Actor  | Sistema |
+|:-------|:---------|
+| | 2.1. Muestra un mensaje "No hay objetivos disponibles" |
 | | 2.2. Termina | 
 
-
-# CU003: Crear Evento
-
----
-
-**Descripción:** Cuando un usuario desea crear un nuevo evento en la plataforma WinBici, registra el nombre del evento y la fecha del mismo.
-
-**Actor:** Usuario
-
-
-## Flujo de Eventos (Guión)
-
-
-| Actor  | Sistema |
-|:-------|:---------|
-| 1. Ingresa el nombre del evento y la fecha del mismo | |
-| | 2. Verifica que el nombre del evento no esté registrado previamente |
-| | 3. Genera un ID único para el nuevo evento |
-| | 4. Almacena el nuevo equipo con su ID, nombre y fecha |
-| | 5. Retorna un mensaje de confirmación de la creación del evento |
-
-
-## Excepciones
-
-2. Cuando el nombre del evento ya está registrado
-
-| Actor  | Sistema |
-|:-------|:---------|
-| | 2.1. Muestra un mensaje "El nombre del evento ya está registrado" |
-| | 2.2. Termina |
-
-
-# CU004: Asignar Puntos a Usuario
-
----
-
-**Descripción:** Cuando un administrador desea asignar puntos a un usuario en la plataforma WinBici, registra el ID del usuario y la cantidad de puntos a asignar.
-
-**Actor:** Administrador
-
-
-## Flujo de Eventos (Guión)
-
-
-| Actor  | Sistema |
-|:-------|:---------|
-| 1. Ingresa el ID del usuario y la cantidad de puntos a asignar | |
-| | 2. Verifica que el ID del usuario exista |
-| | 3. Asigna la cantidad de puntos al usuario |
-| | 4. Almacena la transacción de puntos |
-| | 5. Retorna un mensaje de confirmación de la asignación de puntos |
-
-
-## Excepciones
-
-2. Cuando el ID del usuario no existe
-
-| Actor  | Sistema |
-|:-------|:---------|
-| | 2.1. Muestra un mensaje "El ID del usuario no existe" |
-| | 2.2. Termina |
-
-# CU005: Asignar Logro a Usuario
-
----
-
-**Descripción:** Cuando un administrador desea asignar un logro a un usuario en la plataforma WinBici, registra el ID del usuario y el ID del logro a asignar.
-
-**Actor:** Administrador
-
-
-## Flujo de Eventos (Guión)
-
-
-| Actor  | Sistema |
-|:-------|:---------|
-| 1. Ingresa el ID del usuario y el ID del logro a asignar | |
-| | 2. Verifica que el ID del usuario exista |
-| | 3. Verifica que el ID del logro exista |
-| | 4. Asigna el logro al usuario |
-| | 5. Almacena la asignación del logro |
-| | 6. Retorna un mensaje de confirmación de la asignación del logro |
-
-
-## Excepciones
-
-2. Cuando el ID del usuario no existe
-
-| Actor  | Sistema |
-|:-------|:---------|
-| | 2.1. Muestra un mensaje "El ID del usuario no existe" |
-| | 2.2. Termina |
-
-3. Cuando el ID del logro no existe
-
-| Actor  | Sistema |
-|:-------|:---------|
-| | 3.1. Muestra un mensaje "El ID del usuario no existe" |
-| | 3.2. Termina |
-
-
-  ```
